@@ -1,29 +1,97 @@
 @import '../../Styles/config';
 
 .card {
-	padding: 0 1rem 5rem 1rem;
+	// background: $lightgrey-color;
+	// margin: 1rem;
+	// padding: 1rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 
-	img {
-		height: 220px;
-		border-bottom: 10px solid $primary-color;
-		border-radius: 0.2rem;
+	.card-wrapper {
+		background: white;
+		margin: 1rem 1rem 3rem 1rem;
+		// padding: 1rem;
+		border-radius: 0.6rem;
+
+		img {
+			height: 240px;
+			border-radius: 0.6rem;
+		}
+
+		&_actions {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+
+			h4 {
+				padding-top: 0.6rem;
+				font-size: 1rem;
+				font-weight: 500;
+				color: $lightbg-color;
+				letter-spacing: 0.06rem;
+
+				.project-name {
+					color: $bg-color;
+				}
+			}
+
+			.icons {
+				display: flex;
+				flex-direction: row;
+
+				.link {
+					display: flex;
+					flex-direction: row;
+					justify-content: center;
+
+					a {
+						text-align: center;
+						margin: 0;
+						padding-top: 0.5rem;
+						padding-right: 1.5rem;
+						color: $lightbg-color;
+					}
+				}
+
+				.likes {
+					display: flex;
+					flex-direction: row;
+					padding-top: 0.6rem;
+					color: $lightbg-color;
+
+					i {
+						margin: 0;
+						padding-top: 0.15rem;
+					}
+
+					p {
+						margin: 0;
+						padding-left: 0.4rem;
+						font-size: 0.9rem;
+						font-weight: 500;
+					}
+				}
+			}
+		}
 	}
 
 	&_content {
+		margin: 0rem 1rem;
+		// padding: 0rem 1rem;
+		display: flex;
+		flex-direction: column;
+
 		h4 {
 			font-size: 0.8rem;
 			font-weight: 400;
 			color: $lightbg-color;
-			padding: 1rem 0;
 			letter-spacing: 0.15rem;
 		}
 
 		p {
 			font-family: $secondary-font;
-			font-size: 1.1rem;
+			font-size: 0.9rem;
 			font-weight: 100;
 			letter-spacing: 0.07rem;
 			line-height: 1.6rem;
@@ -34,19 +102,15 @@
 			color: $bg-color;
 		}
 	}
-
-	.underline {
-		height: 0.2rem;
-		border: none;
-		background-color: $bg-color;
-	}
 }
 
 // Media Queries
 @include media-md {
 	.card {
-		img {
-			height: 320px;
+		.card-wrapper {
+			img {
+				height: 400px;
+			}
 		}
 	}
 }
