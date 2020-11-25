@@ -18,7 +18,7 @@ const Navigation = () => {
 				></span>
 			</div>
 
-			<nav className='nav'>
+			<nav className={click.clicked ? 'nav' : 'nav open'}>
 				<ul className='menu-nav'>
 					{MenuItems.map((item, index) => {
 						return (
