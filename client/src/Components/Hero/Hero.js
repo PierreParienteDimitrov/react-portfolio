@@ -9,13 +9,15 @@ function Hero() {
 					<div className='list'>
 						<ul>
 							<li>
-								<a href='/code'>Web Developer</a>
+								<a href='/code'>web developer</a>
 							</li>
 							<li>
-								<a href='/design'>Designer</a>
+								<a href='/design'>
+									<span className='link-italic'>designer</span>
+								</a>
 							</li>
 							<li>
-								<a href='/entrepreneur'>Entrepreneur</a>
+								<a href='/entrepreneur'>entrepreneur</a>
 							</li>
 						</ul>
 					</div>
