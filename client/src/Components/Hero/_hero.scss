@@ -10,7 +10,7 @@ img {
 	min-height: 450px;
 
 	.content-wrap {
-		padding: 2rem 1rem;
+		padding: 4rem 1rem;
 	}
 
 	.list > ul {
@@ -51,7 +51,7 @@ img {
 }
 
 // Media Queries
-@media (min-width: 700px) {
+@include media-md {
 	#showcase {
 		.content-wrap {
 			margin: 6rem 4rem;
@@ -78,55 +78,3 @@ img {
 		}
 	}
 }
-
-// .wrapper {
-// 	display: grid;
-// 	margin: 2rem 6rem;
-// 	grid-template-columns: 7fr 3fr;
-// 	grid-gap: 1rem;
-
-// 	ul {
-// 		list-style: none;
-
-// 		li {
-// 			font-size: 60px;
-// 		}
-// 		:hover {
-// 			text-decoration: underline;
-// 			text-decoration-color: $primary-color;
-// 		}
-// 	}
-
-// 	.about-me {
-// 		border-left: 4px solid $bg-color;
-// 		display: flex;
-// 		flex-direction: column;
-// 		justify-content: center;
-
-// 		&_description {
-// 			font-size: 1.3rem;
-// 			line-height: 1.6;
-// 		}
-
-// 		&_talk {
-// 			font-size: 1.1rem;
-// 			padding: 2rem 0 1rem 0;
-// 			color: $lightbg-color;
-// 		}
-
-// 		&_contact {
-// 			font-size: 1, 1rem;
-// 			text-decoration: underline;
-// 			color: $bg-color;
-// 		}
-// 	}
-// }
-
-// .wrapper > div {
-// 	background: #eee;
-// 	padding: 1em;
-// }
-
-// .wrapper > div:nth-child(odd) {
-// 	background: #ddd;
-// }

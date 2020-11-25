@@ -64,7 +64,6 @@
 	width: 100vw;
 	opacity: 0.98;
 	visibility: hidden;
-	background-color: $bg-color;
 
 	&.open {
 		visibility: visible;
@@ -120,5 +119,34 @@
 @for $i from 1 through 5 {
 	.menu-nav_item:nth-child(#{$i}) {
 		transition-delay: ($i * 0.1s) + 0.1s;
+	}
+}
+
+@include media-md {
+	.menu-btn {
+		visibility: hidden;
+	}
+
+	.nav {
+		visibility: visible;
+
+		.menu-nav {
+			display: block;
+			transform: translateY(0);
+			height: 100%;
+			background: transparent;
+			text-align: left;
+
+			&_item {
+				display: inline;
+				padding-left: 5rem;
+			}
+
+			&_link {
+				font-size: 1.2rem;
+				text-transform: capitalize;
+				color: $bg-color;
+			}
+		}
 	}
 }
