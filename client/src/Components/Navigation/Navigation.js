@@ -5,17 +5,25 @@ import { NavLink } from 'react-router-dom';
 
 const Navigation = () => {
 	return (
-		<nav className='NavbarItem'>
-			<h1 className='navbar-logo'>React</h1>
+		<header>
+			<div className='menu-btn'>
+				<span className='menu-btn_burger'></span>
+			</div>
 
-			{MenuItems.map((item, index) => {
-				return (
-					<NavLink className='d-inline p-2' to={item.url}>
-						{item.title}
-					</NavLink>
-				);
-			})}
-		</nav>
+			<nav className='nav'>
+				<ul className='menu-nav'>
+					{MenuItems.map((item, index) => {
+						return (
+							<li className='menu-nav_link' key={index}>
+								<NavLink className='menu-nav_link' to={item.url}>
+									{item.title}
+								</NavLink>
+							</li>
+						);
+					})}
+				</ul>
+			</nav>
+		</header>
 	);
 };
 

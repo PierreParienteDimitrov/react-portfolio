@@ -6,15 +6,17 @@ import About from './Pages/About';
 import Code from './Pages/Code';
 import Design from './Pages/Design';
 import Contact from './Pages/Contact';
+import Entrepreneur from './Pages/Entrepreneur';
 
 function App() {
 	return (
 		<Router>
-			<div>
+			<div className='App'>
 				<Navigation />
 				<Route exact path='/' component={About} />
 				<Route path='/code' component={Code} />
 				<Route path='/design' component={Design} />
+				<Route path='/entrepreneur' component={Entrepreneur} />
 				<Route path='/contact' component={Contact} />
 			</div>
 		</Router>
