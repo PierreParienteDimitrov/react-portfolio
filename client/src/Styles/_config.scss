@@ -5,3 +5,15 @@ $white-color: white;
 $lightGrey-color: #f2f2f2;
 $primary-color: #66d8ef;
 $secondary-color: #fe7ac6;
+
+@mixin transition-ease {
+	transition: all 0.5s ease-in-out;
+}
+
+@function set-text-color($color) {
+	@if (lightness($color) < 40%) {
+		@return #000;
+	} @else {
+		@return #fff;
+	}
+} ;

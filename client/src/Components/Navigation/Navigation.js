@@ -4,7 +4,7 @@ import { MenuItems } from './MenuItems';
 import { NavLink } from 'react-router-dom';
 
 const Navigation = () => {
-	const [click, setClick] = useState({ clicked: false });
+	const [click, setClick] = useState({ clicked: true });
 
 	const handleClick = () => {
 		setClick({ clicked: !click.clicked });
@@ -19,11 +19,14 @@ const Navigation = () => {
 			</div>
 
 			<nav className={click.clicked ? 'nav' : 'nav open'}>
-				<ul className='menu-nav'>
+				<ul className={click.cliked ? 'menu-nav' : 'menu-nav open'}>
 					{MenuItems.map((item, index) => {
 						return (
-							<li className='menu-nav_link' key={index}>
-								<NavLink className='menu-nav_link' to={item.url}>
+							<li
+								className={click.clicked ? 'menu-nav_item' : 'menu-nav_item open'}
+								key={index}
+							>
+								<NavLink className='menu-nav_link' to={item.url} onClick={handleClick}>
 									{item.title}
 								</NavLink>
 							</li>
