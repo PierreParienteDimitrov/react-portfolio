@@ -4,10 +4,18 @@ import { MenuItems } from './MenuItems';
 import { NavLink } from 'react-router-dom';
 
 const Navigation = () => {
+	const [click, setClick] = useState({ clicked: false });
+
+	const handleClick = () => {
+		setClick({ clicked: !click.clicked });
+	};
+
 	return (
 		<header>
-			<div className='menu-btn'>
-				<span className='menu-btn_burger'></span>
+			<div className='menu-btn' onClick={handleClick}>
+				<span
+					className={click.clicked ? 'menu-btn_burger' : 'menu-btn_burger open'}
+				></span>
 			</div>
 
 			<nav className='nav'>
