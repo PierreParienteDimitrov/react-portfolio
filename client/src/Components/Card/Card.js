@@ -14,6 +14,7 @@ function Card() {
 					consequatur.
 				</p>
 			</div>
+			<div className='underline'></div>
 		</div>
 	);
 }

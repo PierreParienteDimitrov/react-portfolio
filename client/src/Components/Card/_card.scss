@@ -1,7 +1,10 @@
 @import '../../Styles/config';
 
 .card {
-	padding: 4rem 1rem;
+	padding: 0 1rem 5rem 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 
 	img {
 		height: 220px;
@@ -9,25 +12,41 @@
 		border-radius: 0.2rem;
 	}
 
-	p {
-		font-size: 1.1rem;
-		font-weight: 300;
-		padding: 0;
+	&_content {
+		h4 {
+			font-size: 0.8rem;
+			font-weight: 400;
+			color: $lightbg-color;
+			padding: 1rem 0;
+			letter-spacing: 0.15rem;
+		}
+
+		p {
+			font-family: $secondary-font;
+			font-size: 1.1rem;
+			font-weight: 100;
+			letter-spacing: 0.07rem;
+			line-height: 1.6rem;
+			padding-bottom: 1.8rem;
+		}
+
+		.project-name {
+			color: $bg-color;
+		}
 	}
 
-	h4 {
-		font-size: 0.8rem;
-		font-weight: 400;
-		color: $lightbg-color;
-		padding: 1rem 0;
-		letter-spacing: 0.15rem;
+	.underline {
+		height: 0.2rem;
+		border: none;
+		background-color: $bg-color;
 	}
+}
 
-	.project-name {
-		// font-size: 0.9rem;
-		// font-weight: 400;
-		color: $bg-color;
-		// padding: 1rem 0;
-		// letter-spacing: 0.2rem;
+// Media Queries
+@include media-md {
+	.card {
+		img {
+			height: 320px;
+		}
 	}
 }

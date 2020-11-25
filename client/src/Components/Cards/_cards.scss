@@ -1,0 +1,13 @@
+@import '../../Styles/config';
+
+// Media Queries
+@include media-md {
+	.content-wrap {
+		margin: 6rem 8rem;
+
+		.grid {
+			display: grid;
+			grid-template-columns: 3fr 2fr;
+		}
+	}
+}

@@ -1,12 +1,12 @@
 import React from 'react';
 import Hero from '../Components/Hero/Hero';
-import Card from '../Components/Card/Card';
+import Cards from '../Components/Cards/Cards';
 
 function About() {
 	return (
 		<div>
 			<Hero />
-			<Card />
+			<Cards />
 		</div>
 	);
 }
